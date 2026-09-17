@@ -36,7 +36,7 @@ Tasks:
 - [x] Two Sum, Valid Anagram, Group Anagrams
 - [x] Contains Duplicate, Top K with a map plus sorting
 - [x] Longest Substring Without Repeating Characters
-- [ ] Minimum Size Subarray Sum
+- [x] Minimum Size Subarray Sum
 - [ ] Move Zeroes, Remove Duplicates from Sorted Array
 - [ ] Container With Most Water
 - [ ] Subarray Sum Equals K (prefix sums plus a map)
