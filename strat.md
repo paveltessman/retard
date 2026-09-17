@@ -33,7 +33,7 @@ Write from memory:
 - [x] cycle detection in a list (Floyd algorithm, "tortoise and hare")
 
 Tasks:
-- [ ] Two Sum, Valid Anagram, Group Anagrams
+- [x] Two Sum, Valid Anagram, Group Anagrams
 - [ ] Contains Duplicate, Top K with a map plus sorting
 - [ ] Longest Substring Without Repeating Characters
 - [ ] Minimum Size Subarray Sum
