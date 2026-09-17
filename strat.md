@@ -39,7 +39,7 @@ Tasks:
 - [x] Minimum Size Subarray Sum
 - [x] Move Zeroes, Remove Duplicates from Sorted Array
 - [x] Container With Most Water
-- [ ] Subarray Sum Equals K (prefix sums plus a map)
+- [x] Subarray Sum Equals K (prefix sums plus a map)
 - [ ] Product of Array Except Self
 - [ ] Valid Parentheses, Min Stack
 - [ ] Daily Temperatures, Largest Rectangle in Histogram (monotonic stack)
