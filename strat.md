@@ -37,7 +37,7 @@ Tasks:
 - [x] Contains Duplicate, Top K with a map plus sorting
 - [x] Longest Substring Without Repeating Characters
 - [x] Minimum Size Subarray Sum
-- [ ] Move Zeroes, Remove Duplicates from Sorted Array
+- [x] Move Zeroes, Remove Duplicates from Sorted Array
 - [ ] Container With Most Water
 - [ ] Subarray Sum Equals K (prefix sums plus a map)
 - [ ] Product of Array Except Self
