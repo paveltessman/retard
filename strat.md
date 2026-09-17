@@ -34,8 +34,8 @@ Write from memory:
 
 Tasks:
 - [x] Two Sum, Valid Anagram, Group Anagrams
-- [ ] Contains Duplicate, Top K with a map plus sorting
-- [ ] Longest Substring Without Repeating Characters
+- [x] Contains Duplicate, Top K with a map plus sorting
+- [x] Longest Substring Without Repeating Characters
 - [ ] Minimum Size Subarray Sum
 - [ ] Move Zeroes, Remove Duplicates from Sorted Array
 - [ ] Container With Most Water
