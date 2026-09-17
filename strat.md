@@ -30,20 +30,20 @@ Write from memory:
 - [x] stack and queue, on a slice and on a linked list
 - [x] deque on a ring buffer
 - [x] reverse a linked list iteratively
-- [ ] cycle detection in a list (Floyd algorithm, "tortoise and hare")
+- [x] cycle detection in a list (Floyd algorithm, "tortoise and hare")
 
 Tasks:
-- Two Sum, Valid Anagram, Group Anagrams
-- Contains Duplicate, Top K with a map plus sorting
-- Longest Substring Without Repeating Characters
-- Minimum Size Subarray Sum
-- Move Zeroes, Remove Duplicates from Sorted Array
-- Container With Most Water
-- Subarray Sum Equals K (prefix sums plus a map)
-- Product of Array Except Self
-- Valid Parentheses, Min Stack
-- Daily Temperatures, Largest Rectangle in Histogram (monotonic stack)
-- Reverse Linked List, Merge Two Sorted Lists, Linked List Cycle, Remove Nth Node From End, Middle of the Linked List
+- [ ] Two Sum, Valid Anagram, Group Anagrams
+- [ ] Contains Duplicate, Top K with a map plus sorting
+- [ ] Longest Substring Without Repeating Characters
+- [ ] Minimum Size Subarray Sum
+- [ ] Move Zeroes, Remove Duplicates from Sorted Array
+- [ ] Container With Most Water
+- [ ] Subarray Sum Equals K (prefix sums plus a map)
+- [ ] Product of Array Except Self
+- [ ] Valid Parentheses, Min Stack
+- [ ] Daily Temperatures, Largest Rectangle in Histogram (monotonic stack)
+- [ ] Reverse Linked List, Merge Two Sorted Lists, Linked List Cycle, Remove Nth Node From End, Middle of the Linked List
 
 Go theory in the evening (60-90 minutes):
 - slice: len, cap, growth on append, why append can damage the original array, copy, passing a slice into a function
