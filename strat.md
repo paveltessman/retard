@@ -40,7 +40,7 @@ Tasks:
 - [x] Move Zeroes, Remove Duplicates from Sorted Array
 - [x] Container With Most Water
 - [x] Subarray Sum Equals K (prefix sums plus a map)
-- [ ] Product of Array Except Self
+- [x] Product of Array Except Self
 - [ ] Valid Parentheses, Min Stack
 - [ ] Daily Temperatures, Largest Rectangle in Histogram (monotonic stack)
 - [ ] Reverse Linked List, Merge Two Sorted Lists, Linked List Cycle, Remove Nth Node From End, Middle of the Linked List
