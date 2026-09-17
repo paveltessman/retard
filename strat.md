@@ -27,10 +27,10 @@ Interview: about 60 minutes, 2-3 coding tasks, plus theory questions during the 
 Arrays, hash tables, two pointers, sliding window, prefix sums, stack, queue, deque, monotonic stack, linked list.
 
 Write from memory:
-- stack and queue, on a slice and on a linked list
-- deque on a ring buffer
-- reverse a linked list iteratively
-- cycle detection in a list (Floyd algorithm, "tortoise and hare")
+- [x] stack and queue, on a slice and on a linked list
+- [ ] deque on a ring buffer
+- [ ] reverse a linked list iteratively
+- [ ] cycle detection in a list (Floyd algorithm, "tortoise and hare")
 
 Tasks:
 - Two Sum, Valid Anagram, Group Anagrams
