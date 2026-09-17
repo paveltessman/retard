@@ -28,8 +28,8 @@ Arrays, hash tables, two pointers, sliding window, prefix sums, stack, queue, de
 
 Write from memory:
 - [x] stack and queue, on a slice and on a linked list
-- [ ] deque on a ring buffer
-- [ ] reverse a linked list iteratively
+- [x] deque on a ring buffer
+- [x] reverse a linked list iteratively
 - [ ] cycle detection in a list (Floyd algorithm, "tortoise and hare")
 
 Tasks:
