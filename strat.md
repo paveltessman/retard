@@ -61,8 +61,8 @@ Write from memory (this is the main goal of the day):
 
 Binary search, three templates, write each one from memory:
 - [x] classic value search
-- [ ] lower bound (first element >= x)
-- [ ] upper bound (first element > x)
+- [x] lower bound (first element >= x)
+- [x] upper bound (first element > x)
 
 Think about the boundary invariants separately. This is where people make the most mistakes.
 

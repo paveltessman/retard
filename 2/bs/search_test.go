@@ -17,10 +17,23 @@ const (
 	// bool alone and ignores the index.
 	anyMatch contract = iota
 
-	// firstMatch is the contract of slices.BinarySearch. On a hit the index
-	// points to the first number equal to val. On a miss the index points to
-	// the place where val goes in.
+	// firstMatch is the contract of slices.BinarySearch, of lower_bound of C++
+	// and of bisect_left of Python. The index is the count of the numbers
+	// smaller than val. On a hit it points to the first number equal to val.
+	// On a miss it points to the place where val goes in.
 	firstMatch
+
+	// afterMatch is the contract of upper_bound of C++ and of bisect_right of
+	// Python. The index is the count of the numbers that are val or smaller.
+	// On a hit it points one place after the last number equal to val. On a
+	// miss it points to the place where val goes in, as firstMatch does.
+	afterMatch
+
+	// lastMatch asks for the last number equal to val on a hit. On a miss the
+	// test looks at the bool alone and ignores the index. Pick this contract
+	// for a search that gives the last number that is val or smaller, which is
+	// the afterMatch index minus one.
+	lastMatch
 )
 
 // searchCase names one binary search of the package and gives the function.
@@ -29,12 +42,12 @@ const (
 // search(nums, val) gives back true if nums holds val, and false if not. The
 // function must not change nums.
 //
-// The third field tells the test what the index means. Start with anyMatch.
-// Move to firstMatch after your search gives the first of the equal numbers
-// and the insert place on a miss:
+// The third field tells the test what the index means:
 //
-//	{"BinarySearch", binarySearch, anyMatch}
-//	{"BinarySearch", binarySearch, firstMatch}
+//	{"BinarySearch", binarySearch, anyMatch}  // any of the equal numbers
+//	{"LowerBound", lowerBound, firstMatch}    // the first equal number
+//	{"UpperBound", upperBound, afterMatch}    // one place after the last equal number
+//	{"UpperBound", upperBound, lastMatch}     // the last equal number
 //
 // A generic function fits this shape as binarySearch[int].
 type searchCase struct {
@@ -47,6 +60,20 @@ type searchCase struct {
 // function, then run go test ./2/bs.
 var searches = []searchCase{
 	{"BinarySearch", binarySearch, anyMatch},
+	{"LowerBound", lowerBound, firstMatch},
+	{"UpperBound", upperBound, afterMatch},
+}
+
+// countAtMost gives the count of the numbers of nums that are val or smaller.
+// That count is the answer that the afterMatch contract asks for.
+func countAtMost(nums []int, val int) int {
+	i, _ := slices.BinarySearchFunc(nums, val, func(num, val int) int {
+		if num <= val {
+			return -1
+		}
+		return 1
+	})
+	return i
 }
 
 // checkSearch looks for val in nums and compares the answer with the answer of
@@ -56,7 +83,7 @@ var searches = []searchCase{
 func checkSearch(t *testing.T, s searchCase, nums []int, val int) bool {
 	t.Helper()
 
-	wantIdx, wantFound := slices.BinarySearch(nums, val)
+	firstIdx, wantFound := slices.BinarySearch(nums, val)
 
 	in := slices.Clone(nums)
 	gotIdx, gotFound := s.search(in, val)
@@ -70,7 +97,22 @@ func checkSearch(t *testing.T, s searchCase, nums []int, val int) bool {
 		return false
 	}
 
-	if s.contract == firstMatch {
+	// wantIdx holds the one index that the contract allows. It stays at -1
+	// while the contract allows more than one index.
+	wantIdx := -1
+
+	switch s.contract {
+	case firstMatch:
+		wantIdx = firstIdx
+	case afterMatch:
+		wantIdx = countAtMost(nums, val)
+	case lastMatch:
+		if gotFound {
+			wantIdx = countAtMost(nums, val) - 1
+		}
+	}
+
+	if wantIdx >= 0 {
 		if gotIdx != wantIdx {
 			t.Errorf("%s(%v, %d) = %d, %t, want the index %d", s.name, nums, val, gotIdx, gotFound, wantIdx)
 			return false
@@ -78,6 +120,7 @@ func checkSearch(t *testing.T, s searchCase, nums []int, val int) bool {
 		return true
 	}
 
+	// The contract allows any index that points to a number equal to val.
 	if !gotFound {
 		return true
 	}
