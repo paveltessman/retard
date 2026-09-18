@@ -33,6 +33,7 @@ var algorithms = []sortCase{
 	{"MergeSort", mergeSort[int]},
 	{"QuickSort", quickSort[int]},
 	{"HeapSort", heapSort},
+	{"InsertionSort", insertionSort},
 }
 
 // inPlace turns a sort that works on the slice of the caller into the shape
