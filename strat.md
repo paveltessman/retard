@@ -67,14 +67,13 @@ Binary search, three templates, write each one from memory:
 Think about the boundary invariants separately. This is where people make the most mistakes.
 
 Tasks:
-- Binary Search, Search Insert Position, Find First and Last Position
-- Search in Rotated Sorted Array
-- binary search on the answer: Koko Eating Bananas, Capacity To Ship Packages, Split Array Largest Sum
-- Kth Largest Element in an Array (heap and quickselect, both ways)
-- Top K Frequent Elements
-- Merge k Sorted Lists
-- Merge Intervals, Insert Interval, Non-overlapping Intervals
-- task 3 from the contest, solve it yourself and measure the time honestly
+- [x] Search in Rotated Sorted Array
+- [ ] binary search on the answer: Koko Eating Bananas, Capacity To Ship Packages, Split Array Largest Sum
+- [ ] Kth Largest Element in an Array (heap and quickselect, both ways)
+- [ ] Top K Frequent Elements
+- [ ] Merge k Sorted Lists
+- [ ] Merge Intervals, Insert Interval, Non-overlapping Intervals
+- [ ] task 3 from the contest, solve it yourself and measure the time honestly
 
 Theory in the evening:
 - complexity and stability of bubble, insertion, merge, quick, heap, counting, radix
