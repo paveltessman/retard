@@ -18,7 +18,9 @@ import (
 // Add one line for each new function:
 //
 //	{"QuickSelect", quickSelect[int]}
-var selectors []selectCase
+var selectors []selectCase = []selectCase{
+	{"QuickSelect", quickSelect},
+}
 
 type selectCase struct {
 	name string
