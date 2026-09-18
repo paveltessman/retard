@@ -53,11 +53,11 @@ Go theory in the evening (60-90 minutes):
 ## Day 2. Sorting, binary search, heap
 
 Write from memory (this is the main goal of the day):
-- merge sort (and the merge of two sorted arrays as a separate function)
-- quicksort with Hoare partition, plus quickselect for the k-th order statistic
-- binary heap on a slice: siftUp, siftDown, push, pop, build in O(n)
-- heapsort
-- insertion sort (useful as the answer to "what is faster on small arrays")
+- [x] merge sort (and the merge of two sorted arrays as a separate function)
+- [ ] quicksort with Hoare partition, plus quickselect for the k-th order statistic
+- [ ] binary heap on a slice: siftUp, siftDown, push, pop, build in O(n)
+- [ ] heapsort
+- [ ] insertion sort (useful as the answer to "what is faster on small arrays")
 
 Binary search, three templates, write each one from memory:
 - classic value search
