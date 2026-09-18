@@ -31,6 +31,7 @@ type sortCase struct {
 // new algorithm, then run go test ./2/sorts.
 var algorithms = []sortCase{
 	{"MergeSort", mergeSort[int]},
+	{"QuickSort", quickSort[int]},
 }
 
 // inPlace turns a sort that works on the slice of the caller into the shape
