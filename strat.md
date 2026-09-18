@@ -60,9 +60,9 @@ Write from memory (this is the main goal of the day):
 - [x] insertion sort (useful as the answer to "what is faster on small arrays")
 
 Binary search, three templates, write each one from memory:
-- classic value search
-- lower bound (first element >= x)
-- upper bound (first element > x)
+- [x] classic value search
+- [ ] lower bound (first element >= x)
+- [ ] upper bound (first element > x)
 
 Think about the boundary invariants separately. This is where people make the most mistakes.
 
