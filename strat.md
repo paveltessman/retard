@@ -86,10 +86,10 @@ Practical Go advice: do not write container/heap in the interview. The five meth
 ## Day 3. Recursion and trees
 
 Write from memory:
-- binary tree traversals: preorder, inorder, postorder, recursive and iterative with a stack
-- level order traversal (BFS with a queue, split into levels)
-- BST: search, insert, delete a node (three cases), BST validation with min/max bounds
-- tree height, diameter
+- [ ] binary tree traversals: preorder, inorder, postorder, recursive and iterative with a stack
+- [ ] level order traversal (BFS with a queue, split into levels)
+- [ ] BST: search, insert, delete a node (three cases), BST validation with min/max bounds
+- [ ] tree height, diameter
 
 Tasks:
 - Maximum Depth of Binary Tree, Invert Binary Tree, Symmetric Tree
