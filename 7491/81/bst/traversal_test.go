@@ -47,6 +47,9 @@ var traversals = []traversalCase{
 	{"PreorderRecursive", preorderRecursive, preOrder},
 	{"InorderRecursive", inorderRecursive, inOrder},
 	{"PostorderRecursive", postorderRecursive, postOrder},
+	{"PreorderIterative", preorderIterative, preOrder},
+	{"InorderIterative", inorderIterative, inOrder},
+	{"PostorderIterative", postorderIterative, postOrder},
 }
 
 // buildTree makes a tree out of a level order list. The list holds the value
