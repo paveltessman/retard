@@ -1,3 +1,3 @@
-module yy26prep
+module retard
 
 go 1.27
